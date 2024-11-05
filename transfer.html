@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIAKIAGO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+</head>
+<div>
+    <header>
+        <div class="input">
+            <p>Give us a call to book your next flight! 09030440440 / 09112062508</p>
+            <b> For inquiry,<a href="mailto:info@kiakiago.com">Mail us here!</a></b>
+        </div> <nav class="row">
+            <pre><img src="images/kiakiago.png" alt="" width="150px" height="50px"></pre>
+            <ul class="brand">
+                <li><a href="index.html">HOME</a></li>
+                <li ><a href="visa.html">VISA</a></li>
+                <li><a href="insurance.html">INSURANCE</a></li>
+                <li><a href="flights&hotel.html">FLIGHTS & HOTEL</a></li>
+                <li class="current"><a href="transfer.html">TRANSFER</a></li>
+                <li ><a href="tours.html">TOURS</a></li>
+                <button type="button" class="contact">CONTACT US</button>
+            </ul>
+        </nav>
+    </header>
+    <div class="transfer">
+        <div class="fort">
+            <div class="sidebar">
+                <img src="images/fly.jpg" alt="Transfer Service Image">
+                <h1>Give us a call</h1>
+                <b class="phone-number">09139385153</b>
+                <p>You can also send us a message on <br> WhatsApp</p>
+            </div>
+
+            <div class="form-content">
+                <h1>Transfer Service</h1>
+                <form id="transfer-form">
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="coup">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="coup">
+                            <label for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="pickup-date">Pick-Up Date*</label>
+                            <input type="date" id="pickup-date" name="pickup-date" required>
+                        </div>
+                        <div class="coup">
+                            <label for="pickup-time">Pick-Up Time</label>
+                            <input type="time" id="pickup-time" name="pickup-time">
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="return-date">Return Date</label>
+                            <input type="date" id="return-date" name="return-date">
+                        </div>
+                        <div class="coup">
+                            <label for="return-time">Return Time</label>
+                            <input type="time" id="return-time" name="return-time">
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label>Trip Type*</label>
+                            <div class="form-options">
+                                <label><input type="radio" name="trip-type" value="one-way" required> One Way</label>
+                                <label><input type="radio" name="trip-type" value="round-trip"> Round Trip</label>
+                                <label><input type="radio" name="trip-type" value="hourly"> Hourly</label>
+                            </div>
+                        </div>
+                        <div class="coup">
+                            <label>Is this an airport pickup?</label>
+                            <div class="form-options">
+                                <label><input type="radio" name="airport-pickup" value="yes"> Yes</label>
+                                <label><input type="radio" name="airport-pickup" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="airport">Airport</label>
+                            <input type="text" id="airport" name="airport">
+                        </div>
+                        <div class="coup">
+                            <label for="airline">Airline</label>
+                            <input type="text" id="airline" name="airline">
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="flight-number">Flight Number</label>
+                            <input type="text" id="flight-number" name="flight-number">
+                        </div>
+                        <div class="coup">
+                            <label for="luggages">Luggages</label>
+                            <input type="text" id="luggages" name="luggages">
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="pickup-address">Pick-Up Location/Address*</label>
+                            <input type="text" id="pickup-address" name="pickup-address" required>
+                        </div>
+                        <div class="coup">
+                            <label for="dropoff-address">Drop-Off Location/Address*</label>
+                            <input type="text" id="dropoff-address" name="dropoff-address" required>
+                        </div>
+                    </div>
+                    <div class="rog">
+                        <div class="coup">
+                            <label for="passengers">Number of passengers</label>
+                            <input type="number" id="passengers" name="passengers">
+                        </div>
+                        <div class="coup">
+                            <label>Additional Stops</label>
+                            <div class="form-options">
+                                <label><input type="radio" name="additional-stops" value="no" checked> No</label>
+                                <label><input type="radio" name="additional-stops" value="yes"> Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coup">
+                        <label for="stops">Please specify the stops</label>
+                        <textarea id="stops" name="stops"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">SEND</button>
+                </form>
+                   
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow">
+        <div class="carousel-container">
+            <div class="carousel-title">Partner Airlines</div>
+            <div class="carousel" id="carousel">
+                <img src="images/Air-Cote-D-Voire.png" alt="Turkish Airlines">
+                <img src="images/AirFrance-1-.png" alt="Virgin Atlantic">
+                <img src="images/Asky.png" alt="Air Cote d'Ivoire">
+                <img src="images/British-Airways.png" alt="british air">
+                <img src="images/Delta-Airlines.png" alt="Asky">
+
+                <img src="images/Air-Cote-D-Voire.png" alt="Turkish Airlines">
+                <img src="images/AirFrance-1-.png" alt="Virgin Atlantic">
+                <img src="images/Asky.png" alt="Air Cote d'Ivoire">
+                <img src="images/British-Airways.png" alt="british air">
+                <img src="images/Delta-Airlines.png" alt="Asky">
+
+
+            </div>
+            <button class="carousel-button prev-button" onclick="moveCarousel(-1)">‹</button>
+            <button class="carousel-button next-button" onclick="moveCarousel(1)">›</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-part">
+            <div class="bottom-par">
+                <span><img src="images/kiakiago.png" alt="logos"></span>
+                <h4>We aim for positive. By Integrity, we do <br> what is right. We render quality service. <br> We lead by example. We value every <br>relationship built. We take pride in what <br> we do. We are approachable. Community <br> is key to us.</h4>
+            </div>
+            <div class="bottom-par">
+                <h1 class="tar">ABUJA OFFICE</h1>
+                <span class="bk">
+                    <img src="images/house.png" alt="" size="10">
+                    <h4>Suite 334 Rock Of Ages Mall,<br>
+                        Jabi, Abuja</h4>
+                </span>
+                <span class="bk">
+                    <img src="images/phone (1).png" alt="">
+                    <h4>+234 90 30440440</h4>
+                </span>
+                <span class="bk">
+                    <img src="images/mail.png" alt="">
+                    <h4>info@kiakiago.com</h4>
+                </span>
+                <span class="bk">
+                    <img src="images/copy.png" alt="">
+                    <h4>kiakiago.com</h4>
+                </span>
+            </div>
+            <div class="bottom-par">
+                <h1 class="tar">LAGOS OFFICE</h1>
+                <span class="bk">
+                    <img src="images/house.png" alt="">
+                    <h4>Top Floor, 119 Ogunlana Drive,<br>
+                        Surulere, Lagos</h4>
+                </span>
+                <span class="bk">
+                    <img src="images/phone (1).png" alt="">
+                    <h4>+234 90 30440440</h4>
+                </span>
+                <span class="bk">
+                    <img src="images/mail.png" alt="">
+                    <h4>info@kiakiago.com</h4>
+                </span>
+                <span class="bk">
+                    <img src="images/copy.png" alt="">
+                    <h4>kiakiago.com</h4>
+                </span>
+            </div>
+            <div class="bottom-par">
+                <img src="images/fly.jpg" alt=""><br>
+                <center><button type="button" class="contact">CONTACT US</button></center>
+            </div>
+
+        </div>
+
+        <footer>
+            <span>&copy;copyright 2019-2024|Kiakia.com Now Travels & Tour Ltd <a href="index.php">Kiakiago</a>|All Rights Reserved</span>
+            <div>
+                <i class="fa-brands fa-x-twitter fa-beat"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const items = carousel.children;
+        const itemWidth = items[0].offsetWidth + 20; // width + margin of one item
+        const totalItems = items.length;
+        const slideWidth = itemWidth * 5; // Width for 5 items
+        let currentIndex = 0;
+
+        // Function to move the carousel by 5 items
+        function moveCarousel() {
+            currentIndex += 6;
+
+            // Loop back to the start after reaching the end
+            if (currentIndex >= totalItems) {
+                carousel.style.transition = 'none'; // Disable transition for smooth reset
+                currentIndex = 0;
+                carousel.style.transform = `translateX(0)`;
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.9s ease'; // Re-enable transition
+                    currentIndex += 5;
+                    carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
+                }, 50); // Small delay to allow CSS transition reset
+            } else {
+                carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
+            }
+        }
+
+        // Auto-slide interval
+        let autoSlideInterval = setInterval(moveCarousel, 1000); // Slide every 3 seconds
+
+        // Pause auto-slide on hover
+        carousel.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+        carousel.addEventListener('mouseout', () => autoSlideInterval = setInterval(moveCarousel, 1000));
+    </script>
+
+
+    </body>
+
+</html>
