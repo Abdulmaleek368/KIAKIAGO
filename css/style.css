@@ -390,11 +390,11 @@ label{
     height:50px;
 }
 
-input:focus,
+/*input:focus,
 textarea:focus {
     outline: none;
     border-color: #007bff;
-}
+}*/
 
 .form-group textarea {
     height: 80px;
@@ -583,7 +583,7 @@ footer > span > a{
 }
 
 /* Mobile Responsive*/
-@media screen and (max-width:950px) {
+@media screen and (max-width:1000px) {
    /* Home Page*/
     .input{
         font-size:0.7em;
