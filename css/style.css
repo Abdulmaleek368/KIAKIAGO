@@ -1,3 +1,4 @@
+/*Header*/
 *{
     margin: 0;
     padding: 0;
@@ -59,9 +60,15 @@
 .brand{
     display: flex;
     justify-content: space-around;
-    gap: 25px;
     padding-right:10%;
+    list-style: none;
+    gap: 15px;
 
+}
+.hamburger {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .brand li{
@@ -69,6 +76,7 @@
     font-size: larger;
     font-weight: bolder;
     display: flex;
+    align-items: center;
 }
 .brand a{
     color: white;
@@ -79,24 +87,27 @@
     color: #1b57b9;
 }
 
-.contact{
-    font-size: light;
-    font-weight: light;
-    color: white;
-    background-color: #149eee;
-    border-radius:50px;
-    border: none;
-    width:150px;
-    height: 3vh;
+ .contact {
+        background-color: #00bfff;
+        color: white;
+        border: none;
+        border-radius:15px;
+        padding:5px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+.contact:hover {
+    background-color: #008cba;
 }
 
+/* Body form 1*/
 .jarring{
     padding-top: 2%;
     justify-content: center;
     height: 70vh;
     display: flex;
-    
-    
 }
 
 .hotel{
@@ -104,32 +115,33 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 8px;
-    width:70%;
-    
-    
+    overflow: hidden;
+    width:80%;
 }
 
 .search{
     padding: 20px;
     padding-top: 5%;
-    max-width: 1000px;
+    width: 1300px;
     margin: 50px auto;
     background-color:#232444;
-    opacity:100px;
+    opacity:0.8;
     height: 25vh;
+    display:flex;
 }
 
 .flight-search{
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    
 }
 
 .jarring .skull{
     font-size: bold;
     font-weight: lighter;
     font: 2em sans-serif;
-    padding-left: 10%;
+    padding-left: 5%;
 }
 
 .trip-option{
@@ -159,29 +171,28 @@
 .trip-option button:hover{
     color: goldenrod;
 }
+.form-fields input{
+    width:200px;
+    height:50px;
+}
 
 .form-fields{
     display: flex;
     gap: none;
 }
 
-.form-fields input{
-    width: 150px;
-    height: 4vh;
+.light select{
+    width: 200px;
+    height:54px;
 }
-
- select #fris{
-    width:150px;
-    height:4.4vh;
-}
-
-.form-fields button{
+.search-btn{
     font-size: large;
     font-weight: bold;
-    width:250px;
     background-color: red;
     color: white;
     border: none;
+    width:200px;
+    height:54px;
 }
 
 input::placeholder{
@@ -190,20 +201,21 @@ input::placeholder{
     font-weight: bolder;
 }
 
+/* Body Note and form*/
+
 h2{
     color:white;
     padding-top: 5%;
     padding-left: 20%;
     padding-bottom:10%;
-    display: flex;
+    display:flex;
 }
 
-.flight-book{
-    display: flex;
-    gap: 20px;
- 
-}
 
+.vape select{
+    width:400px;
+    height:50px;
+}
 .booking{
     margin-left:19%;
     margin-top: 7%;
@@ -216,6 +228,7 @@ h2{
     padding-bottom: 20px;
 }
 
+
 .booking h3{
     font-weight: light;
     font-size: large;
@@ -227,11 +240,65 @@ h2{
     font-weight: lighter;
 }
 
-#hint{
-    font:bolder;
-    font-weight: 5rem;
-    padding-bottom:2%;
+.form-trainer {
+    width:400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
 }
+
+
+.form-trainer h2 {
+    color: #00bfff;
+    font-size: 24px;
+  
+}
+
+
+.form-trainer input,
+.form-trainer textarea {
+    width: 350px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    resize: none;
+    outline: none;
+}
+
+.form-trainer input::placeholder,
+.form-trainer textarea::placeholder {
+    color: #999;
+}
+
+
+.form-trainer button {
+    width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00bfff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-trainer button:hover {
+    background-color: #008cba;
+}
+
+
+/* visa Application form*/
 .form-group{
     display:flex;
     flex-direction: column;
@@ -248,8 +315,6 @@ h2{
     padding-bottom: 50px;
 }
 
-
-
 .form-container {
     display: flex;
     width: 100%;
@@ -258,7 +323,8 @@ h2{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    height:80vh;
+    height:70vh;
+    padding-top: 2%;
 }
 
 .sidebar{
@@ -310,13 +376,13 @@ label{
     display: flex;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="time"],
-input[type="number"],
-textarea {
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row input[type="date"],
+.form-row .input[type="time"],
+.form-row input[type="number"],
+.form-group textarea {
      border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -330,7 +396,7 @@ textarea:focus {
     border-color: #007bff;
 }
 
-textarea {
+.form-group textarea {
     height: 80px;
     width:800px;
 }
@@ -356,11 +422,8 @@ button.submit-button {
 button.submit-button:hover {
     background-color: #007bff;
 }
-select{
-    width:400px;
-    height: 50px;
-}
 
+/* Insurance Service*/
 .front{
     font-family: Arial, sans-serif;
     display: flex;
@@ -385,6 +448,8 @@ select{
     padding-left: 1%
 }
 
+
+/*Transfer Service*/
 .transfer{
     font-family: Arial, sans-serif;
     display: flex;
@@ -409,6 +474,11 @@ select{
     display: flex;
 }
 
+.coup textarea{
+    height: 80px;
+    width:800px;
+}
+
 .coup{
     display: flex;
     flex-direction: column;
@@ -422,7 +492,7 @@ select{
     color: #007bff;
 }
 
-
+/*Carousel*/
 .slideshow{
     font-family: Arial, sans-serif;
     display: flex;
@@ -478,11 +548,9 @@ select{
 .next-button {
     right: 10px;
 }
-.bk{
-    display: flex;
-    padding: 10px;
-    gap:10px;
-}
+
+
+/*Footer*/
 .bottom{
     background-color: #333;
     padding-bottom:4%;
@@ -501,42 +569,581 @@ select{
     font: lighter;
     font-weight: lighter;
 }
-h4{
-    color: #149eee;
-    opacity:10px;
-    font-weight: lighter;
-    opacity:0.6;
+.bk{
+    display: flex;
+    padding: 10px;
+    gap:10px;
 }
 
-footer > span{
-    color: #149eee;
-    font-weight: bold;
-    opacity: 0.6;
-    padding-left:15%;
-}
-
-
-.shank{
-    float: right;
-    border: none;
-}
-.fa-facebook-f{
-    color: white;
-    font-size: 70px;
-    border: none;
-}
-
-.fa-x-twitter{
-    border:none;
-    font-size:50px;
-    text-decoration:none;
-}
-.fa-x-twitter:hover{
-    color: #007bff;
-}
 footer > span > a{
     color: #00bfff;
     font-weight:bold;
     font-size: 1em;
     text-decoration: none;
+}
+
+/* Mobile Responsive*/
+@media screen and (max-width:950px) {
+   /* Home Page*/
+    .input{
+        font-size:0.7em;
+        justify-content: space-between;
+        font-weight: bold;
+        padding-left:3%;
+        padding-right:2%;
+        font-size:10px;
+    }
+
+    .row pre{
+        width: 100px;
+        height:50px;
+        
+}
+    .jarring{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom:5%;
+        padding-top:35%;
+    }
+    .search{
+        background-color:#232444;
+        background-size: cover;
+        width:85%;
+        overflow: hidden;
+        height:68vh;
+}
+    .flight-search{
+        width:100%;
+        overflow: hidden;
+        padding:15px;
+}
+   .trip-type{
+        flex-direction: column;
+        
+    }
+    .form-fields{
+        flex-direction: column;
+    }
+    .form-fields input{
+        font-size:10px;
+        padding: 10px;
+        width: 85%;
+        height:5vh;
+        overflow: hidden;
+    }
+     .light .gris{
+        width:93%;
+        overflow: hidden;
+        height:8vh;
+    }
+    .search-btn{
+        width: 93%;
+        overflow: hidden;
+        height:5vh;
+        background-color: greenyellow;
+    }
+    .clone{
+        width:100%;
+        overflow: hidden;
+        height:130vh;
+        background-position:center;
+    }
+    
+
+    .brand {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        color: black;
+    }
+    
+    .hamburger {
+        display: none;
+        font-size: 20px;
+        cursor: pointer;
+        padding-left:40%;
+        display: block;
+        font-size: 40px;
+        color:white;
+    }
+    
+    .brand {
+        list-style: none;
+        display: none; 
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        align-items:none;
+        justify-content: none;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        z-index: 1;
+     }
+        
+        .brand li {
+            padding: 15px;
+            text-align: center;
+             color: black;
+    }
+    
+        .brand li a, .brand li button {
+            color: black;
+            text-decoration: none;
+            opacity:0.7;
+            font-weight:bolder;
+            font-size: bolder;
+
+        }
+      .brand.show {
+            display: flex;
+        }
+
+        header nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: relative;
+            padding-right:10%;
+        }
+
+        .xya {
+      padding-right:25%;
+      font-size:15px;
+    }
+
+   .flight-book > .booking{
+        margin:5%;
+    }
+
+    br{
+        display: none;
+    }
+    
+    .booking h1{
+        font-weight: large;
+        font-size: bold;
+        font-style: inherit;
+        padding-bottom: 20px;
+    }
+    
+    
+    .flight-book > .booking h3{
+        font-weight:bold;
+        font-size: 20px;
+        padding-bottom:20px;
+        color:#61636c;
+        opacity:0.7;
+    }
+    
+    .booking h4{
+        font: bold;
+        font-weight:bold;
+        font-size:15px;
+    }
+    .form-trainer {
+        width:80%;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+         height: 80vh;
+         justify-content: center;
+         align-items: center;
+         margin: 50px auto;
+        padding: 20px;
+         
+         
+    }
+    
+    .form-trainer h2 {
+        color: #00bfff;
+        font-size: 24px;
+        font-weight:bold;
+        padding-right:10%;
+    }
+    
+    
+    .form-trainer input{
+        width: 270px;
+        height:5vh;
+        padding: 10px 15px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+        background-color: #f9f9f9;
+        resize: none;
+        outline: none;
+    }
+    .form-trainer textarea{
+        width:270px;
+        height:10vh;
+    }
+    
+    .form-trainer input::placeholder,
+    .form-trainer textarea::placeholder {
+        color: #999;
+    }
+    
+    
+    .form-trainer button {
+        width: 200px;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #00bfff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Visa Page */
+    .form-group{
+        flex-direction: column;
+        align-items:start;
+        
+    }
+    
+    .continue{
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+        padding-top: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form-container {
+        width:90%;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        height:240vh;
+        padding-top: 5%;
+    }
+    
+    .sidebar{
+        padding-left:10px;
+        padding-top:5%;
+    }
+    
+    
+    .sidebar img {
+        width: 95%;
+        height: 45vh;
+        padding:0;
+    }
+    
+    .sidebar h1 {
+        margin-bottom: 25px;
+        font-size:25px;
+        opacity:0.8;
+        font-weight:bold;
+        
+    }
+    
+    .phone-number {
+        color: #6badf3;
+        font-size: 2.5em;
+        font-weight: bold;
+        padding-bottom:25px;
+    }
+    span h1{
+        margin-bottom: 25px;
+        margin-top:20px;
+        font-size:25px;
+        opacity:0.8;
+        font-weight:bold;
+    }
+    .sidebar b{
+        color: #00bfff;
+        font-size:23px;
+        font-weight:bold;
+        border-bottom: 1px solid #00bfff;
+        margin-bottom:15px;
+    }
+
+    .sidebar p{
+        padding-top:5%;
+        color: #61636c;
+        font-weight: bold;
+    }
+    
+    .form-content h1{
+        margin-bottom: 50px;
+        margin-top:45px;
+        font-size: 25px;
+        font-weight: bold;
+        opacity:0.7;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 100%;
+        overflow: hidden;
+        gap:5px;
+        padding-bottom:3%;
+    }
+    .form-group label{
+        padding-bottom:2%;
+        color:#999;
+        font: light;
+        font-weight: bold;
+        padding-bottom:10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row input[type="tel"],
+    .form-row input[type="date"],
+    .form-row input[type="time"],
+    .form-row input[type="number"],
+    .form-group textarea {
+         border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 300px;
+        height:50px;
+        background-color:transparent;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+    
+    .form-group textarea {
+        height: 80px;
+        width:300px;
+    }
+    .vape select{
+        width:300px;
+        height:50px;
+    }
+    hr{
+        display: none;
+    }
+    
+    .form-options {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    button.submit-button {
+        padding: 12px;
+        width: 30%;
+        background-color: #00bfff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    
+    button.submit-button:hover {
+        background-color: #007bff;
+    }
+    
+    /*Insurance Page*/
+    .front{
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding-top: 25%;
+      }
+    
+    .form{
+       flex-direction: column;
+        width: 90%;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        height:200vh;
+    }
+    /* Transfer Service */
+    .transfer{
+        font-family: Arial, sans-serif;
+        background-color: white;
+        flex-direction: column;
+        width:100%;
+    }
+    
+    .fort{
+       flex-direction: column;
+        width: 90%;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        height:375vh;
+        padding-top: 2%;
+    }
+    
+    .rog{
+        flex-direction: column;
+    }
+    
+    .coup textarea{
+        height: 100px;
+        width:300px;
+    }
+    
+    .coup{
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 100%;
+        gap:5px;
+        padding-bottom:3%;
+    }
+    
+    .shake{
+        color: #007bff;
+    }
+    
+    /*Flights & Hotel Booking*/
+    .hotel{
+        padding-top: 2%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        width:90%;
+        overflow:y;
+        
+    }
+     #icon{
+        background-color:red;
+        width:254px;
+        height:7vh;
+        border:none;
+    }
+    #fris{
+        width:254px;
+        height:7vh;
+    }
+    /*Carousel*/
+    .carousel-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        font: bold;
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 1s ease;
+    }
+    
+    
+    .carousel img {
+        width: 220px;
+        height: 35px;
+        margin: 0 10px;
+        border: 0.7px solid grey;
+        align-items: center;
+    }
+    .carousel-button {
+        position: absolute;
+        top: 80%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        padding: 2px 10px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+    .prev-button {
+        left: 10px;
+    }
+    
+    .next-button {
+        right: 10px;
+    }
+    
+    /*footer*/
+    
+    .bottom-par h4{
+        color: #007bff;
+        opacity:0.4;
+        font-size:14px;
+}
+.bk h4{
+    color: #007bff;
+    opacity:0.4;
+    font-size:15px;
+}
+    
+    .bottom{
+        background-color: #333;
+        padding-bottom:4%;
+        width:100%;
+        overflow: hidden;
+        align-items: start;
+    }
+   
+    
+    .bottom-part{
+        flex-direction: column;
+        padding-top:10%;
+    }
+    .bottom-part > span >img{
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .tar{
+        color: white;
+        font: lighter;
+        font-weight: lighter;
+    }
+    
+    .bottom-par {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+.bottom-p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ .bottom-pa{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+   
+ }
+ .bottom-t{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+    
+
 }

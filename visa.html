@@ -7,7 +7,6 @@
     <title>KIAKIAGO</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header>
         <div class="input">
@@ -16,7 +15,10 @@
         </div>
         <nav class="row">
             <pre><img src="images/kiakiago.png" alt="" width="150px" height="50px"></pre>
-            <ul class="brand">
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="brand" id="menu">
                 <li><a href="index.html">HOME</a></li>
                 <li class="current"><a href="visa.html">VISA</a></li>
                 <li><a href="insurance.html">INSURANCE</a></li>
@@ -39,7 +41,7 @@
                 <h3 class="phone-number">09139385153</h3>
                 <p>You can also send us a message on <br>WhatsApp</p><br><br>
                 <hr><br><br><br>
-                <h1>Send us an Email</h1>
+                <span><h1>Send us an Email</h1></span>
                 <b>info@Kiakiago.com</b>
                 <p>24/7/365</p>
 
@@ -51,7 +53,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="first-name"> Your Name*</label>
-                            <input type="text" id="first-name" name="first-name" required>
+                            <input type="text" id="first-name" name="first-name"placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address*</label>
@@ -71,15 +73,18 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="">Purpose of travel</label>
-                            <select name="" id="pick">
+                            <div class="vape">
+                            <select id="pick">
                                 <option value="">Study</option>
                                 <option value="">Work</option>
                                 <option value="">Tourism</option>
                                 <option value="">Pilgrimage</option>
                             </select>
                         </div>
+
+                        </div>
                         <div class="form-group">
-                            <label for="dest">Destination Country</label>
+                            <label for="dest">Destination Country*</label>
                             <input type="text" name="dest">
                         </div>
                     </div>
@@ -116,94 +121,104 @@
         </div>
     </div>
 
-    <script>
-        const carousel = document.getElementById('carousel');
-        const items = carousel.children;
-        const itemWidth = items[0].offsetWidth + 20; // width + margin of one item
-        const totalItems = items.length;
-        const slideWidth = itemWidth * 5; // Width for 5 items
-        let currentIndex = 0;
-
-        // Function to move the carousel by 5 items
-        function moveCarousel() {
-            currentIndex += 5;
-
-            // Loop back to the start after reaching the end
-            if (currentIndex >= totalItems) {
-                carousel.style.transition = 'none'; // Disable transition for smooth reset
-                currentIndex = 0;
-                carousel.style.transform = `translateX(0)`;
-                setTimeout(() => {
-                    carousel.style.transition = 'transform 0.9s ease'; // Re-enable transition
-                    currentIndex += 5;
-                    carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
-                }, 50); // Small delay to allow CSS transition reset
-            } else {
-                carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
-            }
-        }
-
-        // Auto-slide interval
-        let autoSlideInterval = setInterval(moveCarousel, 3000); // Slide every 3 seconds
-
-        // Pause auto-slide on hover
-        carousel.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
-        carousel.addEventListener('mouseout', () => autoSlideInterval = setInterval(moveCarousel, 3000));
-    </script>
-
+           <footer>
     <div class="bottom">
         <div class="bottom-part">
             <div class="bottom-par">
                 <span><img src="images/kiakiago.png" alt="logos"></span>
                 <h4>We aim for positive. By Integrity, we do <br> what is right. We render quality service. <br> We lead by example. We value every <br>relationship built. We take pride in what <br> we do. We are approachable. Community <br> is key to us.</h4>
             </div>
-            <div class="bottom-par">
+            <div class="bottom-p">
                 <h1 class="tar">ABUJA OFFICE</h1>
                 <span class="bk">
-                    <img src="images/house.png" alt="" size="10">
                     <h4>Suite 334 Rock Of Ages Mall,<br>
                         Jabi, Abuja</h4>
                 </span>
                 <span class="bk">
-                    <img src="images/phone (1).png" alt="">
                     <h4>+234 90 30440440</h4>
                 </span>
                 <span class="bk">
-                    <img src="images/mail.png" alt="">
                     <h4>info@kiakiago.com</h4>
                 </span>
                 <span class="bk">
-                    <img src="images/copy.png" alt="">
                     <h4>kiakiago.com</h4>
                 </span>
             </div>
-            <div class="bottom-par">
+            <div class="bottom-pa">
                 <h1 class="tar">LAGOS OFFICE</h1>
                 <span class="bk">
-                    <img src="images/house.png" alt="">
                     <h4>Top Floor, 119 Ogunlana Drive,<br>
                         Surulere, Lagos</h4>
                 </span>
                 <span class="bk">
-                    <img src="images/phone (1).png" alt="">
                     <h4>+234 90 30440440</h4>
                 </span>
                 <span class="bk">
-                    <img src="images/mail.png" alt="">
                     <h4>info@kiakiago.com</h4>
                 </span>
                 <span class="bk">
-                    <img src="images/copy.png" alt="">
                     <h4>kiakiago.com</h4>
                 </span>
             </div>
-            <div class="bottom-par">
+            <div class="bottom-t">
                 <img src="images/fly.jpg" alt=""><br>
                 <center><button type="button" class="contact">CONTACT US</button></center>
             </div>
         </div>
-
     </div>
+        </footer>
+
+        <script>
+            const carousel = document.getElementById('carousel');
+               const items = carousel.children;
+               const itemWidth = items[0].offsetWidth + 20; // width + margin of one item
+               const totalItems = items.length;
+               const slideWidth = itemWidth * 5; // Width for 5 items
+               let currentIndex = 0;
+       
+               // Function to move the carousel by 5 items
+               function moveCarousel() {
+                   currentIndex += 6;
+       
+                   // Loop back to the start after reaching the end
+                   if (currentIndex >= totalItems) {
+                       carousel.style.transition = 'none'; // Disable transition for smooth reset
+                       currentIndex = 0;
+                       carousel.style.transform = `translateX(0)`;
+                       setTimeout(() => {
+                           carousel.style.transition = 'transform 0.9s ease'; // Re-enable transition
+                           currentIndex += 5;
+                           carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
+                       }, 50); // Small delay to allow CSS transition reset
+                   } else {
+                       carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
+                   }
+               }
+       
+               // Auto-slide interval
+               let autoSlideInterval = setInterval(moveCarousel, 2000); // Slide every 3 seconds
+       
+               // Pause auto-slide on hover
+               carousel.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+               carousel.addEventListener('mouseout', () => autoSlideInterval = setInterval(moveCarousel, 000));
+       
+               
+           function toggleMenu() {
+       const menu = document.getElementById("menu");
+       const hamburger = document.querySelector(".hamburger");
+       
+       // Toggle the menu visibility
+       menu.classList.toggle("show");
+       
+       // Toggle between hamburger and close icons
+       if (menu.classList.contains("show")) {
+           hamburger.innerHTML = "&times;"; // "X" icon
+       } else {
+           hamburger.innerHTML = "&#9776;"; // Hamburger icon
+       }
+       }
+       </script>
+       
 
 </body>
 

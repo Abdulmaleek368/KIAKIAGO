@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIAKIAGO</title>
     <link rel="stylesheet" href="css/style.css">
+    </script>
 </head>
-
 <body>
     <div class="clone">
         <header>
@@ -17,7 +17,10 @@
             </div>
             <nav class="row">
                 <pre><img src="images/kiakiago.png" alt="" width="150px" height="50px"></pre>
-                <ul class="brand">
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <ul class="brand" id="menu">
                     <li class="current"><a href="index.html">HOME</a></li>
                     <li><a href="visa.html">VISA</a></li>
                     <li><a href="insurance.html">INSURANCE</a></li>
@@ -42,7 +45,8 @@
                         <input type="text" placeholder="Going to">
                         <input type="text" placeholder="Departing" onfocus="this.type='date'";onblur="this.type'text'">
                         <input type="text" placeholder="Returning" onfocus="this.type='date'";onblur="this.type'text'">
-                        <select name="passengers" id="fris">
+                        <div class="light">
+                        <select name="passengers" class="gris">
                             <option value="">1 Passenger(s)</option>
                             <option value="">2 Passenger</option>
                             <option value="">3 Passenger</option>
@@ -50,6 +54,7 @@
                             <option value="">5 Passenger</option>
                             <option value="">6 Passenger</option>
                         </select>
+                    </div>
                         <button type="submit" class="search-btn">SEARCH</button>
 
                     </div>
@@ -57,10 +62,11 @@
 
             </section>
         </div>
-
+            <div class="xya">
         <h2>We often enjoy cheapest offers from our airlines!</h2>
+        </div>
     </div>
-    </div>
+    
 
     <div class="flight-book">
         <div class="booking">
@@ -69,14 +75,141 @@
             <h4>Kiakiago is a leading travel agency for best deals in Nigeria with <br> registration number RC – 1638134. We often enjoy discounted fares from <br> our partner airlines and our platform is convenient for customers to book <br> and purchase their travel tickets, hotel bookings and visa processing with <br>ease.</h4>
         </div>
 
-        <div class="massage">
-            <b>Need us to plan your trip?</b><br><br>
-            <input type="text" placeholder="Your Name*"><br><br>
-            <input type="email" placeholder="Email*"><br><br>
-            <input type="tel" placeholder="Telephone"><br><br>
-            <textarea placeholder="Your request*"></textarea>
+        <div class="form-trainer">
+            <h2>Need us to plan your trip?</h2>
+            <form>
+                <input type="text" placeholder="Your Name*" required>
+                <input type="email" placeholder="Email*" required>
+                <input type="tel" placeholder="Telephone">
+                <textarea placeholder="Your Request*" required></textarea><br>
+                <center><button type="submit">SEND REQUEST</button></center>
+            </form>
         </div>
     </div>
+
+    <div class="slideshow">
+        <div class="carousel-container">
+            <div class="carousel-title">Partner Airlines</div>
+            <div class="carousel" id="carousel">
+                <img src="images/Air-Cote-D-Voire.png" alt="Turkish Airlines">
+                <img src="images/AirFrance-1-.png" alt="Virgin Atlantic">
+                <img src="images/Asky.png" alt="Air Cote d'Ivoire">
+                <img src="images/British-Airways.png" alt="british air">
+                <img src="images/Delta-Airlines.png" alt="Asky">
+
+                <img src="images/Air-Cote-D-Voire.png" alt="Turkish Airlines">
+                <img src="images/AirFrance-1-.png" alt="Virgin Atlantic">
+                <img src="images/Asky.png" alt="Air Cote d'Ivoire">
+                <img src="images/British-Airways.png" alt="british air">
+                <img src="images/Delta-Airlines.png" alt="Asky">
+
+            </div>
+            <button class="carousel-button prev-button" onclick="moveCarousel(-1)">‹</button>
+            <button class="carousel-button next-button" onclick="moveCarousel(1)">›</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="bottom">
+            <div class="bottom-part">
+                <div class="bottom-par">
+                    <span><img src="images/kiakiago.png" alt="logos"></span>
+                    <h4>We aim for positive. By Integrity, we do <br> what is right. We render quality service. <br> We lead by example. We value every <br>relationship built. We take pride in what <br> we do. We are approachable. Community <br> is key to us.</h4>
+                </div>
+                <div class="bottom-p">
+                    <h1 class="tar">ABUJA OFFICE</h1>
+                    <span class="bk">
+                        <h4>Suite 334 Rock Of Ages Mall,<br>
+                            Jabi, Abuja</h4>
+                    </span>
+                    <span class="bk">
+                        <h4>+234 90 30440440</h4>
+                    </span>
+                    <span class="bk">
+                        <h4>info@kiakiago.com</h4>
+                    </span>
+                    <span class="bk">
+                        <h4>kiakiago.com</h4>
+                    </span>
+                </div>
+                <div class="bottom-pa">
+                    <h1 class="tar">LAGOS OFFICE</h1>
+                    <span class="bk">
+                        <h4>Top Floor, 119 Ogunlana Drive,<br>
+                            Surulere, Lagos</h4>
+                    </span>
+                    <span class="bk">
+                        <h4>+234 90 30440440</h4>
+                    </span>
+                    <span class="bk">
+                        <h4>info@kiakiago.com</h4>
+                    </span>
+                    <span class="bk">
+                        <h4>kiakiago.com</h4>
+                    </span>
+                </div>
+                <div class="bottom-t">
+                    <img src="images/fly.jpg" alt=""><br>
+                    <center><button type="button" class="contact">CONTACT US</button></center>
+                </div>
+            </div>
+        </div>
+            </footer>
+
+            
+            <script>
+                function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const hamburger = document.querySelector(".hamburger");
+        
+            // Toggle the menu visibility
+            menu.classList.toggle("show");
+        
+            // Toggle between hamburger and close icons
+            if (menu.classList.contains("show")) {
+                hamburger.innerHTML = "&times;"; // "X" icon
+            } else {
+                hamburger.innerHTML = "&#9776;"; // Hamburger icon
+            }
+        }
+        
+        const carousel = document.getElementById('carousel');
+            const items = carousel.children;
+            const itemWidth = items[0].offsetWidth + 20; // width + margin of one item
+            const totalItems = items.length;
+            const slideWidth = itemWidth * 5; // Width for 5 items
+            let currentIndex = 0;
+        
+            // Function to move the carousel by 5 items
+            function moveCarousel() {
+                currentIndex += 5;
+        
+                // Loop back to the start after reaching the end
+                if (currentIndex >= totalItems) {
+                    carousel.style.transition = 'none'; // Disable transition for smooth reset
+                    currentIndex = 0;
+                    carousel.style.transform = `translateX(0)`;
+                    setTimeout(() => {
+                        carousel.style.transition = 'transform 0.9s ease'; // Re-enable transition
+                        currentIndex += 5;
+                        carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
+                    }, 50); // Small delay to allow CSS transition reset
+                } else {
+                    carousel.style.transform = `translateX(${-slideWidth * (currentIndex / 5)}px)`;
+                }
+            }
+        
+            // Auto-slide interval
+            let autoSlideInterval = setInterval(moveCarousel, 3000); // Slide every 3 seconds
+        
+            // Pause auto-slide on hover
+            carousel.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+            carousel.addEventListener('mouseout', () => autoSlideInterval = setInterval(moveCarousel, 3000));
+           
+</script>        
+        
+    
 
 
 </body>
