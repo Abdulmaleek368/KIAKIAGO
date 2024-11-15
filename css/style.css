@@ -312,7 +312,7 @@ h2{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 50px;
+    padding-bottom:0;
 }
 
 .form-container {
@@ -325,6 +325,7 @@ h2{
     overflow: hidden;
     height:70vh;
     padding-top: 2%;
+    padding-bottom:0;
 }
 
 .sidebar{
@@ -826,7 +827,7 @@ footer > span > a{
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         overflow: hidden;
-        height:240vh;
+        height:220vh;
         padding-top: 5%;
     }
     
@@ -978,7 +979,7 @@ footer > span > a{
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         overflow: hidden;
-        height:200vh;
+        height:180vh;
     }
     /* Transfer Service */
     .transfer{
@@ -995,7 +996,7 @@ footer > span > a{
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         overflow: hidden;
-        height:375vh;
+        height:346vh;
         padding-top: 2%;
     }
     
